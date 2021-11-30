@@ -10,11 +10,11 @@ const useStyle=makeStyles((theme)=>({
 }))
 
 
-export default function Card() {
+export default function Card({card}) {
     const classes=useStyle();
     return (
         <div>
-           <Paper className={classes.card}>Adding ui </Paper> 
+           <Paper className={classes.card}>{card.content} </Paper> 
         </div>
     )
 }
