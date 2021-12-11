@@ -5,9 +5,12 @@ import Title from './Title';
 import Card from './cards';
 import InputContainer from '../input/inputContainer';
 const useStyle=makeStyles((theme)=>({
-    root:{width:'320px',
-    backgroundColor:'#EBECF0',
-    marginLeft:theme.spacing(1),}
+    root:{
+        minWidth:'320px',
+        backgroundColor:'#EBECF0',
+        marginLeft:theme.spacing(1),
+        marginTop:theme.spacing(1),
+}
 }))
 
 export default function List({list}) {
@@ -16,11 +19,11 @@ export default function List({list}) {
         <div>
         <Paper className={classes.root}>
         <CssBaseline />
-        <Title title= {list.title} />
+        <Title title= {list.title} listId={list.id}/>
         {list.cards.map((card)=>(
-            <Card key={card.id} card={card}/>
+            <Card key={card.id} card={card} />
         ))}
-        <InputContainer />
+        <InputContainer listId={list.id} type="card"/>
 
         </Paper>
             
