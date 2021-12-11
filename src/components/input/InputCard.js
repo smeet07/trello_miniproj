@@ -1,10 +1,11 @@
 import { Paper,InputBase, Button, IconButton } from '@material-ui/core'
 import React,{useState, useContext} from 'react'
 import ClearIcon from "@material-ui/icons/Clear"
-import { makeStyles ,fade} from '@material-ui/core';
+import { makeStyles ,alpha} from '@material-ui/core';
 import storeApi from '../../utils/storeApi';
 const useStyle=makeStyles((theme)=>({
     card:{
+        width:'280px',
         margin:theme.spacing(0,1,1,1),
         paddingBottom:theme.spacing(4),
         
@@ -17,7 +18,7 @@ const useStyle=makeStyles((theme)=>({
         backgroundColor:'#5AAC44',
         color:"#fff",
         "&:hover":{
-            backgroundColor:fade("#5AAC44",0.5),
+            backgroundColor:alpha("#5AAC44",0.5),
         }
 
     },
