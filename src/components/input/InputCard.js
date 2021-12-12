@@ -62,7 +62,7 @@ export default function InputCard({setOpen, listId,type}) {
             </Paper>
             </div>
             <div className={classes.confirm}>
-                <Button className={classes.btnConfirm} onClick={handleBtnConfirm}> 
+                <Button onClick={handleBtnConfirm} className={classes.btnConfirm} > 
                 {type==='card'?'Add Card':'Add List'}</Button>
                 <IconButton onClick={()=>setOpen(false)}>
                     <ClearIcon />
