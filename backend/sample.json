@@ -1,5 +1,5 @@
+[
 {
-"ishita":{
     "email": "ishita.rai@somaiya.edu",
     "name":"ishita",
     "password":"test",
@@ -79,7 +79,7 @@
         }
     ]
 },
-"srinil":{
+{
     "email": "srinil.k@somaiya.edu",
     "name":"srinil",
     "password":"test",
@@ -126,7 +126,7 @@
         }
     ]
 },
-"smeet":{
+{
     "email": "smeet.bn@somaiya.edu",
     "name":"smeet",
     "password":"test",
@@ -205,4 +205,4 @@
         }
     ]
 }
-}
+]

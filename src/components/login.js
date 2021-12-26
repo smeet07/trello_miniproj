@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { login } from '../../actions/auth';
+import { login } from '../actions/auth';
 
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
 
-import useStyles from '../../utils/formStyles';
+import useStyles from '../utils/formStyles.js';
 
 const Login = () => {
   const classes = useStyles();
@@ -22,8 +22,11 @@ const Login = () => {
     email: '',
     password: '',
   });
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-  const dispatch = useDispatch();
+ 
+      const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+      const dispatch = useDispatch();
+
+
 
   const { email, password } = formData;
 
@@ -39,7 +42,7 @@ const Login = () => {
   };
 
   if (isAuthenticated) {
-    return <Redirect to='/dashboard' />;
+    return <Navigate to='/dashboard' />;
   }
 
   return (
@@ -96,7 +99,7 @@ const Login = () => {
         </form>
       </div>
       <Box mt={8}>
-        <Copyright />
+
       </Box>
     </Container>
   );
