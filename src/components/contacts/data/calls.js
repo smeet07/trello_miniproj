@@ -1,3 +1,30 @@
+// var url = 'http://localhost:8000/auth';
+// fetch(url).then((response) => response.json())
+//           .then(function(data) { /* do stuff with your JSON data */})
+//           .catch((error) => console.log(error));
+// async function postData(url = '', data = {}) {
+//   const response = await fetch(url, {
+//     method: 'POST', 
+//     mode: 'cors', 
+//     cache: 'no-cache', 
+//     credentials: 'same-origin',
+//     headers: {
+//       'Content-Type': 'application/json'
+//       // 'Content-Type': 'application/x-www-form-urlencoded',
+//     },
+    
+//     body: JSON.stringify(data) // body data type must match "Content-Type" header
+//   });
+//   console.log('k '+data);
+//   return response.json(); // parses JSON response into native JavaScript objects
+// }
+
+// postData('http://localhost:8000/user', {username:"ishita",password:"test",error:""})
+//   .then(data => {
+//     console.log({username:this.state.username,password:this.state.password,error:this.state.error});
+//     console.log(data); // JSON data parsed by `data.json()` call
+//   });
+    
 export const CallsContact = [
   {
     id: 1,

@@ -23,8 +23,8 @@ app.post("/user",async(req,res)=>{
         console.log(req.body);
         const data={
             email:req.body.email,
-            name:req.body.username,
-            password:req.body.email,
+            name:req.body.name,
+            password:req.body.password,
             projects:[] //other stuff while adding project
         }
         const addUser=new user(data);
@@ -34,16 +34,27 @@ app.post("/user",async(req,res)=>{
         console.log("added!")
     }catch(e){res.status(400).send(e)}
 })
-
+//TEMP FN TO BE DELETED
+app.post("/users",async(req,res)=>{
+    try{
+        //const addUser=new user(req.body);
+        console.log(req.body);
+        const addUser=new user(req.body);
+        console.log(req.body);
+        const insertUser=await addUser.save();
+        res.status(201).json({status:"okay"});
+        console.log("added!")
+    }catch(e){res.status(400).send(e)}
+})
 //to auth a user
 app.post("/auth",async(req,res)=>{
     try{
         console.log(req.body);
         // console.log(req.body.username)
-        const getUser=await user.find({name:req.body.username});
+        const getUser=await user.find({name:req.body.name});
         console.log(getUser[0].password)
         if(getUser[0].password==req.body.password){
-        res.status(201).json({status:"okay"});
+        res.status(201).json(getUser[0]);
         }
         else{
         res.status(201).json({status:"nope"}); //pswd not matched
@@ -66,8 +77,8 @@ app.get("/user/:id",async(req,res)=>{
         const id=String(req.params.id);
         console.log(id);
         const getUser1=await user.find({name:id});
-        console.log(getUser1);
-        res.json(getUser1);
+        console.log(getUser1[0]);
+        res.json(getUser1[0]);
     }catch(e){res.status(400).send(e)}
 }) //get all user data
 

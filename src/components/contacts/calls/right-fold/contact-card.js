@@ -7,8 +7,8 @@ function ContactCard({ item }) {
       <div className="contact-top">
         <img src={item.avatar} className="contact-avatar" />
         <div className="contact-info">
-          <lable className="contact-title">{item.name}</lable>
-          <label className="contact-subtitle">{item.type}</label>
+          <lable className="contact-title">{item.title}</lable>
+          {/* <label className="contact-subtitle">{item.type}</label> */}
         </div>
       </div>
       <div className="contact-icons">

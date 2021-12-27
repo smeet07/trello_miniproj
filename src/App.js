@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -10,14 +10,9 @@ import LoginPage from './components/loginPage'
 import SignUp from './components/signUp'
 import Project from './components/project';
 
-const useStyles = makeStyles((theme) => ({
-  // root:{
-  //   backgroundColor:'#003153',
-  // }
-}));
+
 export default function App() {
-  const classes = useStyles();
-  const [backgroundImage, setbackgroundImage] = useState('#003153');
+
   return (
 
     <BrowserRouter>
@@ -26,8 +21,8 @@ export default function App() {
           <Route path="l" element={<Project />} />
           <Route path="signup" element={<SignUp />} />
           {/* <Route path="*" element={<NoPage />} /> */}
-          <Route path="pr" element={<Calls />} />
-
+          <Route path="pr/:id" element={<Calls />} />
+          {/* <Route path='/pr/:id' render={(props) => <Calls {...props}/>}/> */}
         <Route exact path="/" element={<LoginPage />}>
 
         
