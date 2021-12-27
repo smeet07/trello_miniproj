@@ -1,10 +1,12 @@
 .contact-card {
-  background-color: white;
-  width: 28%;
+  background-color: #6264a7d8;
+  width: 25%;
   height: 120px;
   margin: 16px 8px;
-  padding: 16px;
+  float: left;
+  padding-top: 10px;
   border-radius: 8px;
+  font-size: 25px;
 }
 
 .contact-avatar {

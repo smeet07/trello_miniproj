@@ -14,8 +14,8 @@ function ContactCard({ item, idf }) {
       <div className="contact-top">
         {/* <img src={item.avatar} className="contact-avatar" /> */}
         <div className="contact-info">
-        
-          <Link to={ln}style={{ textDecoration: 'none'}}> {item.title} </Link>
+        <label className="contact-title"><Link to={ln}style={{ textDecoration: 'none', color:'white'}}> {item.title} </Link></label>
+          
           
           {/* <label className="contact-subtitle">{item.type}</label> */}
         </div>

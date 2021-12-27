@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import {Link} from 'react-router-dom'
 function Header() {
   return (
     <div className="header">
@@ -8,7 +9,10 @@ function Header() {
       </div>
       <div className="header-leftFold">
         <label className="header-label">Project Wall</label>
+        
       </div>
+      
+      
       <div className="header-rightFold">
 
         <div className="header-profile">

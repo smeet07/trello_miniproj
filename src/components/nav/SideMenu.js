@@ -49,7 +49,7 @@ export default function SideMenu({openSideMenu,setOpenSideMenu,setbackgroundImag
     <div>
         <Drawer open={openSideMenu} anchor='right' onClose={()=>setOpenSideMenu(false)}>
             <div className={classes.drawer}>
-            <h1>hello </h1>
+           
             <div className={classes.menu}>
                 <div className={classes.box} 
                 style={{backgroundImage:`url(${bg2})`, backgroundRepeat:"no-repeat", backgroundSize:'cover'}}

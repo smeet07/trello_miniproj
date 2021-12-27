@@ -5,11 +5,11 @@
 
 }
 .rightFold-heading {
-  padding: 12px 0px;
+  padding: 22px 10px;
   border-bottom: 2px solid lightgray;
 }
 .heading-label {
-  font-size: 24px;
+  font-size: 44px;
   font-weight: 500;
 }
 .rightFold-options {
@@ -53,6 +53,6 @@
 .contact-list {
   display: flex;
   flex-wrap: wrap;
-  overflow: scroll;
+  overflow: hidden;
   justify-content: flex-start;
 }

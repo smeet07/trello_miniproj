@@ -9,7 +9,7 @@ import Calls from './components/contacts/calls/index';
 import LoginPage from './components/loginPage'
 import SignUp from './components/signUp'
 import Project from './components/project';
-
+import Homepage from './components/homepage';
 
 export default function App() {
 
@@ -21,7 +21,9 @@ export default function App() {
           <Route path="signup" element={<SignUp />} />
           <Route exact path="pr/:id/:listid" element={<Project/>} />
           <Route exact path="pr/:id" element={<Calls />} />
-          <Route exact path="/" element={<LoginPage />}>
+          <Route exact path="login" element={<LoginPage />} />
+          <Route exact path="/" element={<Homepage />}>
+
 
         
         </Route>

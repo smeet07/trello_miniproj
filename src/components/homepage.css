@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	margin-top:-75px;
+	height: 95vh;
+	background: linear-gradient(rgba(0.5, 0, 0, 0.5), rgba(0.5, 0, 0, 0.5)),url("../utils/bg_mern.jpg");
+
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+
+
+}
+.wrapper {
+	width: 1670px;
+	margin: auto;
+}
+
+
+.welcome-text {
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: 15% 30%;
+	text-align: center;
+}
+.welcome-text h1 {
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 60px;
+}
+.welcome-text h1 span {
+	color: #00fecb;
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+}
+.welcome-text a:hover {
+	background: #fff;
+	color: #333;
+}
+
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+	.logo {
+		float: left;
+		width: 50%;
+		text-align: center;
+		margin: auto;
+	}
+	img {
+		width: 100%;
+	}
+	.welcome-text {
+		width: 100%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+}

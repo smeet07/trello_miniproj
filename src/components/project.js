@@ -4,9 +4,7 @@ import Wrapper from './wrapper';
 import Navigation from './nav/Navigation';
 
 const useStyles=makeStyles((theme)=>({
-  // root:{
-  //   backgroundColor:'#003153',
-  // }
+
 }));
 export default function Project() {
   const classes=useStyles();

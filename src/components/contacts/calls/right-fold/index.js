@@ -72,7 +72,10 @@ class RightFold extends React.Component {
     <div className="rightFold">
       <div className="rightFold-heading">
         <label className="heading-label">Projects</label>
+        <Link to="/" style={{ textDecoration: 'none', float:'right', padding:'15px 10px', fontSize:'23px'}}>Log Out</Link>
       </div>
+
+      
       <div className="rightFold-options">
         {/* <div className="contact-search">
           <input placeholder="Find a contact" />
