@@ -2,6 +2,8 @@ import React from "react";
 import { CallsContact } from "../../data/calls";
 import ContactCard from "./contact-card";
 import "./right-fold.css";
+import { Link } from 'react-router-dom';
+
 // function RightFold() {
 //   const contacts = CallsContact;
 //   return (
@@ -46,9 +48,7 @@ class RightFold extends React.Component {
       };
       this.idf = this.props.idf;
   }
-  doSomethingWithUser(){
-    this.idf = this.props.idf;
-  }
+
   // ComponentDidMount is used to
   // execute the code 
   componentDidMount() {
@@ -71,25 +71,25 @@ class RightFold extends React.Component {
       return (
     <div className="rightFold">
       <div className="rightFold-heading">
-        <label className="heading-label">Contacts</label>
+        <label className="heading-label">Projects</label>
       </div>
       <div className="rightFold-options">
-        <div className="contact-search">
+        {/* <div className="contact-search">
           <input placeholder="Find a contact" />
           <div className="contact-search-icon">
             <i class="fi-rr-search"></i>
           </div>
-        </div>
+        </div> */}
         <div className="add-button">
           <div className="add-icon">
             <i class="fi-rr-user-add"></i>
           </div>
-          <label className="add-label">Add Contact</label>
+          <label className="add-label">Add Project</label>
         </div>
       </div>
       <div className="contact-list">
         {items.map((item) => {
-          return <ContactCard item={item} />;
+          return <ContactCard item={item} idf={this.idf} />;
         })}
       </div>
     </div>

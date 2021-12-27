@@ -17,13 +17,11 @@ export default function App() {
 
     <BrowserRouter>
       <Routes>
-          {/* <Route index element={<Project />} /> */}
-          <Route path="l" element={<Project />} />
+
           <Route path="signup" element={<SignUp />} />
-          {/* <Route path="*" element={<NoPage />} /> */}
-          <Route path="pr/:id" element={<Calls />} />
-          {/* <Route path='/pr/:id' render={(props) => <Calls {...props}/>}/> */}
-        <Route exact path="/" element={<LoginPage />}>
+          <Route exact path="pr/:id/:listid" element={<Project/>} />
+          <Route exact path="pr/:id" element={<Calls />} />
+          <Route exact path="/" element={<LoginPage />}>
 
         
         </Route>

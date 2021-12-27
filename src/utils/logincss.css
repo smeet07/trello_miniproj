@@ -3,7 +3,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: rgb(5, 90, 17);
+  background-color: #464775;
   background-size: cover;
 
 }
@@ -21,7 +21,7 @@ img{
 .login-box h1{
   float: left;
   font-size: 40px;
-  border-bottom: 6px solid #5fc202;
+  border-bottom: 6px solid #cbc3ec;
   margin-bottom: 50px;
   padding: 13px 0;
 }
@@ -31,7 +31,7 @@ img{
   font-size: 20px;
   padding: 8px 0;
   margin: 8px 0;
-  border-bottom: 1px solid #5fc202;
+  border-bottom: 1px solid #cbc3ec;
 }
 .textbox i{
   width: 26px;
@@ -51,7 +51,7 @@ img{
 .btn{
   width: 100%;
   background: none;
-  border: 2px solid #5fc202;
+  border: 2px solid #cbc3ec;
   color: #ffffff;
   padding: 5px;
   font-size: 18px;

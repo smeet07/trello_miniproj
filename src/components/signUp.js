@@ -139,7 +139,7 @@ postData('http://localhost:8000/user', {username:this.state.username,password:th
           </div>
 
           <input type="submit" value="Sign Up" data-test="submit" class="btn"/>
-          <Link to="/signup">Sign Up</Link>
+          <Link to="/"style={{ textDecoration: 'none', color:'white' }}>login</Link>
           
           </div>
         </form>

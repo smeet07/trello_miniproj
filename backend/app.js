@@ -34,6 +34,24 @@ app.post("/user",async(req,res)=>{
         console.log("added!")
     }catch(e){res.status(400).send(e)}
 })
+//to add a user
+app.post("/addproject",async(req,res)=>{
+    try{
+        //const addUser=new user(req.body);
+        console.log(req.body);
+        const data={
+            email:req.body.email,
+            name:req.body.name,
+            password:req.body.password,
+            projects:[] //other stuff while adding project
+        }
+        const addUser=new user(data);
+        console.log(data);
+        const insertUser=await addUser.save();
+        res.status(201).json({status:"okay"});
+        console.log("added!")
+    }catch(e){res.status(400).send(e)}
+})
 //TEMP FN TO BE DELETED
 app.post("/users",async(req,res)=>{
     try{

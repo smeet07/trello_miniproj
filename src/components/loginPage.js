@@ -3,7 +3,7 @@ import '../App.css';
 import '../utils/logincss.css'
 import {makeStyles} from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import { Navigate } from 'react-router';
+
 const useStyle=makeStyles((theme)=>({
     root:{
         minWidth:'320px',
@@ -131,7 +131,7 @@ postData('http://localhost:8000/auth', {name:this.state.name,password:this.state
           </div>
 
           <input type="submit" value="Log In" data-test="submit" class="btn"/>
-          <Link to="/signup">Sign Up</Link>
+          <Link to="/signup" style={{ textDecoration: 'none', color:'white' }}>Sign Up</Link>
           
           </div>
 

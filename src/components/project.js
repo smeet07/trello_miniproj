@@ -10,7 +10,7 @@ const useStyles=makeStyles((theme)=>({
 }));
 export default function Project() {
   const classes=useStyles();
-  const [backgroundImage, setbackgroundImage] = useState('#003153')
+  const [backgroundImage, setbackgroundImage] = useState('#464775')
   return (
     <div className={classes.root}
     style={{backgroundColor:backgroundImage ,backgroundImage:`url(${backgroundImage})`, backgroundRepeat:"no-repeat", backgroundSize:'cover'}}

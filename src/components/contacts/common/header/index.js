@@ -7,13 +7,10 @@ function Header() {
         <i class="fi-rr-layout-fluid"></i>
       </div>
       <div className="header-leftFold">
-        <label className="header-label">Microsoft Teams</label>
+        <label className="header-label">Project Wall</label>
       </div>
       <div className="header-rightFold">
-        <div className="header-search">
-          <i class="fi-rr-search"></i>
-          <input placeholder="Search" />
-        </div>
+
         <div className="header-profile">
           <div className="profile-options">
             <i class="fi-rr-menu-dots"></i>
