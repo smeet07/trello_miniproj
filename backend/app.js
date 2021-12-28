@@ -100,15 +100,21 @@ app.get("/user/:id",async(req,res)=>{
     }catch(e){res.status(400).send(e)}
 }) //get all user data
 
-// adding a project
+// adding a project SINGLE PROJECT
 // deets in url then pass
-app.post("/user",async(req,res)=>{
+app.post("/addproj",async(req,res)=>{
     try{
-        const addUser=new user(req.body);
-        
         console.log(req.body);
-        const insertUser=await addUser.save();
-        res.status(201).json(insertUser);
+        const x={
+            id:Math.floor(Math.random() * 100000),
+            title:req.body.title,
+            bg:'',
+            teams:[],
+            lists:[],
+        }
+        console.log(x);
+        const inserP=await user.updateOne({id:req.body.id},{ $push: { projects: x } });
+        res.status(201).json({status:okay});
         console.log("added!")
     }catch(e){res.status(400).send(e)}
 })

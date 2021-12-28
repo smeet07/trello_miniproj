@@ -8,6 +8,8 @@ const useStyle=makeStyles((theme)=>({
         width:'280px',
         margin:theme.spacing(0,1,1,1),
         paddingBottom:theme.spacing(4),
+        
+
     },
     input:{
         margin:theme.spacing(1),
@@ -18,17 +20,20 @@ const useStyle=makeStyles((theme)=>({
         "&:hover":{
             backgroundColor:alpha("#5AAC44",0.5),
         }
+
     },
     confirm:{
         margin:theme.spacing(0,1,1,1),
+
+
     }
     
 }))
 
 
-export default function InputCard({setOpen, listId,type}) {
+export default function InputProject2({setOpen}) {
     const classes=useStyle();
-    const {addMoreCard, addMoreList}=useContext(storeApi);
+    const addMoreProject=useContext(storeApi);
 
     const [title, setTitle]=useState(null)
     const handleOnChange=(e)=>{
@@ -36,16 +41,11 @@ export default function InputCard({setOpen, listId,type}) {
     }
     
     const handleBtnConfirm=()=>{
-        if(type==='card'){
-            addMoreCard(title, listId);
+        
+            addMoreProject(title);
             setTitle(''); //set to null after adding card
             setOpen(false);
-        }
-        else{
-            addMoreList(title);
-            setTitle(''); //set to null after adding card
-            setOpen(false);
-        }
+        
     }
 
     return (
@@ -53,12 +53,12 @@ export default function InputCard({setOpen, listId,type}) {
             <div className={classes.confirm}>
             <Paper className={classes.card}>
                 <InputBase onChange={handleOnChange} multiline fullWidth inputProps={{className:classes.input,}} 
-                onBlur={()=>setOpen(false)} value={title} placeholder={type==='card'?"enter task":"enter title"} />
+                onBlur={()=>setOpen(false)} value={title} placeholder="enter project" />
             </Paper>
             </div>
             <div className={classes.confirm}>
                 <Button onClick={handleBtnConfirm} className={classes.btnConfirm} > 
-                {type==='card'?'Add Card':'Add List'}</Button>
+                Add PROJECT</Button>
                 <IconButton onClick={()=>setOpen(false)}>
                     <ClearIcon />
                 </IconButton>
