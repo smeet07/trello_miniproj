@@ -3,7 +3,7 @@ import { CallsContact } from "../../data/calls";
 import ContactCard from "./contact-card";
 import "./right-fold.css";
 import { Link } from 'react-router-dom';
-
+//import InputProject from '../../../input/InputProject'
 // function RightFold() {
 //   const contacts = CallsContact;
 //   return (
@@ -74,8 +74,6 @@ class RightFold extends React.Component {
         <label className="heading-label">Projects</label>
         <Link to="/" style={{ textDecoration: 'none', float:'right', padding:'15px 10px', fontSize:'23px'}}>Log Out</Link>
       </div>
-
-      
       <div className="rightFold-options">
         {/* <div className="contact-search">
           <input placeholder="Find a contact" />
@@ -95,6 +93,10 @@ class RightFold extends React.Component {
           return <ContactCard item={item} idf={this.idf} />;
         })}
       </div>
+      <div className="add-project">
+      {/* <InputProject/> */}
+      </div>
+
     </div>
   );
 }
