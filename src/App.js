@@ -10,7 +10,7 @@ import LoginPage from './components/loginPage'
 import SignUp from './components/signUp'
 import Project from './components/project';
 import Homepage from './components/homepage';
-
+import JoinPage from './components/joinPage';
 export default function App() {
 
   return (
@@ -22,6 +22,7 @@ export default function App() {
           <Route exact path="pr/:id/:listid" element={<Project/>} />
           <Route exact path="pr/:id" element={<Calls />} />
           <Route exact path="login" element={<LoginPage />} />
+          <Route exact path="joinpage/:id" element={<JoinPage />}></Route>
           <Route exact path="/" element={<Homepage />}>
 
 

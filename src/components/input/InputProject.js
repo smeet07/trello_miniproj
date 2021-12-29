@@ -5,16 +5,14 @@ import InputCard from './InputCard';
 import InputProject2 from './InputProject2';
 const useStyle=makeStyles((theme)=>({
     root:{
-        width:"300px",
+        width:"150px",
         marginTop:theme.spacing(1),
     },
     addCard:{
         padding:theme.spacing(1,1,1,2),
         margin:theme.spacing(0,0,1,1),
-        backgroundColor:'#EBECF0',
-        "&:hover":{
-            backgroundColor:alpha("#000",0.25),
-        },
+        backgroundColor:"#6264a7d8",
+        color:"white",
     }
 }))
 

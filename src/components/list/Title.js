@@ -3,26 +3,26 @@ import {Typography,InputBase} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import storeApi from '../../utils/storeApi';
-const useStyle=makeStyles((theme)=>({
-    editableTitleContainer:{
-        margin:theme.spacing(1),
-        display:"flex",
+const useStyle = makeStyles((theme) => ({
+    editableTitleContainer: {
+      margin: theme.spacing(1),
+      display: 'flex',
     },
-    editableTitle:{
-        flexGrow:"1",
-        fontSize:"1.2rem",
-        fontWeight:"bold",
+    editableTitle: {
+      margin: '10px 10px 0 10px',
+      flexGrow: '1',
+      fontSize: '1.2rem',
+      fontWeight: 'medium',
     },
-    input:{
-        fontSize:"1.2rem",
-        fontWeight:"bold",
-        margin:theme.spacing(1),
-        "&:focus":{
-            background:"#ddd",
-        }
-    }
-    
-}))
+    input: {
+      fontSize: '1.2rem',
+      fontWeight: 'medium',
+      margin: theme.spacing(1),
+      '&:focus': {
+        background: '#ddd',
+      },
+    },
+  }));
 
 export default function Title({title,listId}) {
     const [open,setOpen]=useState(false);

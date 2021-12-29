@@ -5,17 +5,18 @@ import Title from './Title';
 import Card from './cards';
 import InputContainer from '../input/inputContainer';
 import { Draggable, Droppable } from 'react-beautiful-dnd';
-const useStyle=makeStyles((theme)=>({
-    root:{
-        minWidth:'320px',
-        backgroundColor:'#EBECF0',
-        marginLeft:theme.spacing(1),
-        marginTop:theme.spacing(1),
+const useStyle = makeStyles((theme) => ({
+    root: {
+      minWidth: '320px',
+      margin: '20px',
+      backgroundColor: '#EBECF0',
+      marginLeft: theme.spacing(1),
+      marginTop: theme.spacing(1),
     },
-    cardContainer:{
-        marginTop:theme.spacing(4),
-    }
-}))
+    cardContainer: {
+      marginTop: theme.spacing(4),
+    },
+  }));
 
 export default function List({list,index}) {
     const classes=useStyle();

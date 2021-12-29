@@ -64,6 +64,37 @@ app.post("/users",async(req,res)=>{
         console.log("added!")
     }catch(e){res.status(400).send(e)}
 })
+
+app.post("/projauth",async(req,res)=>{
+    try{
+        console.log(req.body);
+        // console.log(req.body.username)
+        const getUser=await user.find({"projects.id":req.body.password})
+        var flag=0
+        getUser.forEach(function (arrayItem) {
+            var x = arrayItem.name;
+            if (x==req.body.name){
+                flag=1
+
+            }
+            console.log(x);
+        });
+        if(flag==1){
+            console.log("already a member")
+            res.json({status:"nope"})
+        }
+        else{
+        console.log("can add");
+        const getProj=await user.find({name:"ishita"}, {projects:{$elemMatch: {id:req.body.password}}}); 
+        console.log("---------------------")
+        console.log(getProj[0].projects[0])
+        
+        const inserP=await user.updateOne({name:req.body.name},{ $push: { projects: getProj[0].projects[0] } })
+        res.json({status:"okay"})
+        }
+    }catch(e){res.status(400).send(e)} //user not found
+})
+
 //to auth a user
 app.post("/auth",async(req,res)=>{
     try{
@@ -118,6 +149,21 @@ app.post("/addproj",async(req,res)=>{
         console.log("added!")
     }catch(e){res.status(400).send(e)}
 })
+
+//get a single project
+app.get("/getproj/:userid/:projid",async(req,res)=>{
+    try{
+        // const id=parseInt(req.params.id); {name:"smeet"}, {projects:{$elemMatch: {id:"project-1"}}}
+        console.log(req.params);
+        const getProj=await user.find({name:req.params.userid}, {projects:{$elemMatch: {id:req.params.projid}}}); //gives back list
+        console.log(getProj[0].projects[0]);
+        res.json(getProj[0].projects[0]);
+    }catch(e){res.status(400).send(e)}
+})
+
+
+
+
 
 // app.delete("/user/:id",async(req,res)=>{
 //     try{

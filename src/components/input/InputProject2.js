@@ -5,7 +5,8 @@ import { makeStyles ,alpha} from '@material-ui/core';
 import storeApi from '../../utils/storeApi';
 const useStyle=makeStyles((theme)=>({
     card:{
-        width:'280px',
+        width:'200px',
+        length: '50px',
         margin:theme.spacing(0,1,1,1),
         paddingBottom:theme.spacing(4),
         

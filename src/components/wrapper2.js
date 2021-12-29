@@ -5,8 +5,16 @@ import "./right-fold.css";
 import { Link } from 'react-router-dom';
 import InputProject from '../../../input/InputProject'
 import storeApi from '../../../../utils/storeApi';
+import InputContainer from './input/inputContainer';
+import List from './list/list';
+import store from '../utils/store';
+import storeApi from '../utils/storeApi';
+import { makeStyles } from '@material-ui/core/styles';
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+import {useParams} from 'react-router-dom'
+import axios from 'axios';
 
-class RightFold extends React.Component {
+class Wrapper2 extends React.Component {
    
   // Constructor 
   constructor(props) {
@@ -17,8 +25,6 @@ class RightFold extends React.Component {
           DataisLoaded: false
       };
       this.idf = this.props.idf;
-      this.ln= this.ln="/joinpage/"+this.idf
-
   }
 
   // ComponentDidMount is used to
@@ -78,12 +84,7 @@ class RightFold extends React.Component {
         <Link to="/" style={{ textDecoration: 'none', float:'right', padding:'15px 10px', fontSize:'23px'}}>Log Out</Link>
       </div>
       <div className="rightFold-options">
-      <div className="add-button">
-          <div className="add-icon">
-            <i class="fi-rr-user-add"></i>
-          </div>
-          <Link to={this.ln} style={{ textDecoration: 'none', color:'white' }}>Join project</Link>
-        </div>
+
       </div>
       <div className="contact-list">
         {items.map((item) => {
@@ -100,4 +101,4 @@ class RightFold extends React.Component {
 }
 }
  
-export default RightFold;
+export default Wrapper2;
