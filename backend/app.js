@@ -144,7 +144,7 @@ app.post("/addproj",async(req,res)=>{
             lists:[],
         }
         console.log(x);
-        const inserP=await user.updateOne({id:req.body.id},{ $push: { projects: x } });
+        const inserP=await user.updateOne({name:req.body.id},{ $push: { projects: x } });
         res.status(201).json({status:okay});
         console.log("added!")
     }catch(e){res.status(400).send(e)}
