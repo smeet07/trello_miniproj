@@ -26,9 +26,9 @@ Note: This app requires an active github account to use
 
 ![2](https://user-images.githubusercontent.com/76965628/147534365-74659cbf-b0a5-4381-8126-24f089b95e91.jpeg) 
 
-![3](https://user-images.githubusercontent.com/76965628/147534371-30ebd336-5836-4ee4-838e-bc70d21a10eb.jpeg) 
+# ![3](https://user-images.githubusercontent.com/76965628/147534371-30ebd336-5836-4ee4-838e-bc70d21a10eb.jpeg) 
 
-<! ![4](https://user-images.githubusercontent.com/76965628/147534378-deceb1c2-fbbd-4946-b6ef-6988e52e7c3e.jpeg) >
+# ![4](https://user-images.githubusercontent.com/76965628/147534378-deceb1c2-fbbd-4946-b6ef-6988e52e7c3e.jpeg) 
 
 
 ## Future scope
